@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FaPlusSquare } from 'react-icons/fa';
 import { Link as RouterLink } from 'react-router-dom';
 import { Link as ChakraLink } from '@chakra-ui/react';
-import { useColorMode } from './ui/color-mode';
+import { useColorMode, useColorModeValue } from './ui/color-mode';
 import { LuSun } from 'react-icons/lu';
 import { IoMoon } from 'react-icons/io5';
 
@@ -12,7 +12,7 @@ import { IoMoon } from 'react-icons/io5';
 const Navbar = () => {
     const { colorMode, toggleColorMode } = useColorMode();  
   return (
-    <Container maxW="1140px" px={4}>
+    <Container maxW="1140px" px={4} bg={useColorModeValue("gray.100", "gray.900")}>
       <Flex
         h={16}
         alignItems="center"
